@@ -1,14 +1,10 @@
 # Nama Projek Anda
 
-Selamat datang di [Nama Projek Anda]! 🚀
-
-[Nama Projek Anda] adalah aplikasi web yang memungkinkan pengguna untuk [deskripsi singkat tentang apa yang dilakukan aplikasi Anda].
+Selamat datang di [AnimeList]! 🚀
 
 ## 🌟 Fitur Utama
 
--  **Fitur 1:** [Deskripsi fitur 1]
--  **Fitur 2:** [Deskripsi fitur 2]
--  **Fitur 3:** [Deskripsi fitur 3]
+-  **Fitur:** [...]
 
 ## 📦 Prasyarat
 
@@ -29,7 +25,6 @@ Pastikan Anda telah menginstal:
 
    ```bash
    cd nama-proyek
-
    ```
 
 3. **install dependensi:**
@@ -38,7 +33,7 @@ Pastikan Anda telah menginstal:
     npm install
 ```
 
-4.**Jalankan server pengembangan:**
+4. **Jalankan server pengembangan:**
 
 ```bash
     npm run dev
