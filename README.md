@@ -29,15 +29,15 @@ Pastikan Anda telah menginstal:
 
 3. **install dependensi:**
 
-```bash
+   ```bash
     npm install
-```
+   ```
 
 4. **Jalankan server pengembangan:**
 
-```bash
+   ```bash
     npm run dev
-```
+   ```
 
 ## 📧 Kontak
 
