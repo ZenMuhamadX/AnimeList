@@ -1,4 +1,4 @@
-# Nama Projek Anda
+# AnimeList
 
 Selamat datang di [AnimeList]! 🚀
 
