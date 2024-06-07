@@ -12,11 +12,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
    return (
       <html lang="en">
-         <head>
+         <head suppressHydrationWarning={true}>
             <script
                async
                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9962964998808445"
-               crossorigin="anonymous"
+               crossOrigin="anonymous"
             ></script>
          </head>
          <body
@@ -26,10 +26,6 @@ export default function RootLayout({ children }) {
             <Navbar />
             {children}
          </body>
-         <amp-auto-ads
-            type="adsense"
-            data-ad-client="ca-pub-9962964998808445"
-         ></amp-auto-ads>
       </html>
    );
 }
