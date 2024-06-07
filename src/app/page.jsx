@@ -1,3 +1,5 @@
+//page 
+
 import Header from "@/components/AnimeList/header";
 import AnimeList from "../components/AnimeList";
 
