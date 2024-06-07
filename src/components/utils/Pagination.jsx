@@ -7,36 +7,36 @@ const HeaderMenu = ({ page, lastPage, setPage }) => {
    };
 
    const handleNextPage = () => {
-      if (page < lastPage) {
-         setPage((prevState) => prevState + 1);
-         scrollTop();
-      }
+      setPage((prevState) => prevState + 1);
+      scrollTop();
    };
 
    const handlePrevPage = () => {
-      if (page > 1) {
-         setPage((prevState) => prevState - 1);
-         scrollTop();
-      }
+      setPage((prevState) => prevState - 1);
+      scrollTop();
    };
 
    return (
       <div className="flex justify-center items-center py-4 px-2 gap-4 text-color-primary text-2xl">
-         <button
-            onClick={handlePrevPage}
-            className="transition-all hover:text-color-accent"
-         >
-            Prev |
-         </button>
+         {page <= 1 ? null : (
+            <button
+               onClick={handlePrevPage}
+               className="transition-all hover:text-color-accent"
+            >
+               Prev |
+            </button>
+         )}
          <p>
             {page} of {lastPage}
          </p>
-         <button
-            onClick={handleNextPage}
-            className="transition-all hover:text-color-accent"
-         >
-            | Next
-         </button>
+         {page >= lastPage ? null : (
+            <button
+               onClick={handleNextPage}
+               className="transition-all hover:text-color-accent"
+            >
+               | Next
+            </button>
+         )}
       </div>
    );
 };
