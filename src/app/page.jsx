@@ -1,5 +1,5 @@
 //page
-import { getAnime, getNestedAnimeRecomended } from "../lib/fetchAPI";
+import { getAnime, getNestedAnimeRecomended, reproduce } from "../lib/fetchAPI";
 import Header from "@/components/AnimeList/header";
 import AnimeList from "../components/AnimeList";
 
@@ -9,11 +9,9 @@ const Page = async () => {
       "recommendations/anime",
       "entry"
    );
-   recomendedAnime.sort(() => Math.random() - 0.5);
 
-   recomendedAnime = {
-      data: recomendedAnime.slice(0, 24),
-   };
+   recomendedAnime = reproduce(recomendedAnime, 24);
+
    return (
       <>
          <section>

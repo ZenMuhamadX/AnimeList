@@ -8,5 +8,14 @@ export const getAnime = async (resource, query) => {
 
 export const getNestedAnimeRecomended = async (resource, objectProperty) => {
    const res = await getAnime(resource);
-   return res.data.flatMap((item) => item.entry);
+   return res.data.flatMap((item) => item[objectProperty]);
+};
+
+export const reproduce = (data, gap) => {
+   const first = ~~(Math.random() * (data.length - gap) + 1);
+   const last = first + gap;
+   const res = {
+      data: data.slice(first, last),
+   };
+   return res;
 };

@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 const gabarito = Gabarito({ subsets: ["latin"] });
 
 export const metadata = {
-   title: "AnimeList",
+   title: "ZEN X AnimeList",
    description: "ZENN Animelist",
 };
 

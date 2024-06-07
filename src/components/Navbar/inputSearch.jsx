@@ -10,7 +10,7 @@ const Search = () => {
    const handleSearch = (event) => {
       const keyWord = searchRef.current.value;
 
-      if (!keyWord) return;
+      if (!keyWord || keyWord.trim() == "") return;
 
       if (event.key == "Enter" || event.type == "click") {
          event.preventDefault();
