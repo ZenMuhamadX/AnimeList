@@ -1,4 +1,4 @@
-import { getAnime } from "@/app/lib/fetchAPI";
+import { getAnime } from "@/lib/fetchAPI";
 import VideoPlayer from "@/components/utils/videoPlayer";
 import Image from "next/image";
 const Page = async ({ params: { id } }) => {

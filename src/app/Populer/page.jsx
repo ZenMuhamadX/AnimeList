@@ -1,6 +1,6 @@
 "use client";
 
-import { getAnime } from "../lib/fetchAPI";
+import { getAnime } from "../../lib/fetchAPI";
 import React, { useEffect, useState } from "react";
 import HeaderMenu from "@/components/utils/HeaderMenu";
 import Pagination from "@/components/utils/Pagination";

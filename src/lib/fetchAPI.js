@@ -5,3 +5,8 @@ export const getAnime = async (resource, query) => {
    const animeList = res.json();
    return animeList;
 };
+
+export const getNestedAnimeRecomended = async (resource, objectProperty) => {
+   const res = await getAnime(resource);
+   return res.data.flatMap((item) => item.entry);
+};
