@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Search from "./inputSearch";
+import UserAction from "./userAction";
 
 const Navbar = () => {
    return (
@@ -9,9 +10,7 @@ const Navbar = () => {
                ZEN X AnimeList
             </Link>
             <Search />
-            <Link href="/api/auth/signin" className="">
-               Sign In
-            </Link>
+            <UserAction />
          </div>
       </header>
    );
