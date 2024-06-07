@@ -9,6 +9,8 @@ const Page = async () => {
 
    return (
       <>
+         <head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9962964998808445"
+     crossorigin="anonymous"></script></head>
          <section>
             <Header
                title="Paling Populer"
