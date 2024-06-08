@@ -11,27 +11,27 @@ const Page = async ({ params: { id } }) => {
             </h3>
          </div>
          <div className="pt-4 px-4 gap-2 flex text-color-primary overflow-x-auto">
-            <div className="p-2 w-36 flex flex-col justify-center items-center rounded border-color-accent border">
+            <div className="p-2 w-36 flex flex-col justify-center items-center rounded-full border-color-accent border">
                <h3 className="">Peringkat</h3>
                <p className="">{anime.data.rank}</p>
             </div>
-            <div className="p-2 w-36 flex flex-col justify-center items-center rounded border-color-accent border">
+            <div className="p-2 w-36 flex flex-col justify-center items-center rounded-full border-color-accent border">
                <h3 className="">Score</h3>
                <p className="">{anime.data.score}</p>
             </div>
-            <div className="p-2 w-36 flex flex-col justify-center items-center rounded border-color-accent border">
+            <div className="p-2 w-36 flex flex-col justify-center items-center rounded-full border-color-accent border">
                <h3 className="">Episode</h3>
                <p className="">{anime.data.episodes}</p>
             </div>
-            <div className="p-2 w-36 flex flex-col justify-center items-center rounded border-color-accent border">
+            <div className="p-2 w-36 flex flex-col justify-center items-center rounded-full border-color-accent border">
                <h3 className="">Duration</h3>
                <p className="">{anime.data.duration}</p>
             </div>
-            <div className="p-2 w-36 flex flex-col justify-center items-center rounded border-color-accent border">
+            <div className="p-2 w-36 flex flex-col justify-center items-center rounded-full border-color-accent border">
                <h3 className="">Source</h3>
                <p className="">{anime.data.source}</p>
             </div>
-            <div className="p-2 w-36 flex flex-col justify-center items-center rounded border-color-accent border">
+            <div className="p-2 w-36 flex flex-col justify-center items-center rounded-full border-color-accent border">
                <h3 className="">Season</h3>
                <p className="">{anime.data.season}</p>
             </div>

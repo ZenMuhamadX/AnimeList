@@ -9,7 +9,7 @@ const VideoPlayer = ({ videoID }) => {
       setIsOpen((prevState) => !prevState);
    };
    const option = {
-      width: "300",
+      width: "250",
       height: "250",
    };
 
@@ -36,8 +36,8 @@ const VideoPlayer = ({ videoID }) => {
       <Player />
    ) : (
       <button
+         className="border rounded-full fixed bottom-5 right-5 w-32 bg-color-accent hover:bg-color-primary transition-all shadow-xl text-color-dark"
          onClick={handleVideoPlayer}
-         className="fixed bottom-5 right-5 w-32 bg-color-primary hover:bg-color-accent transition-all shadow-xl text-color-dark"
       >
          Tonton Trailer
       </button>

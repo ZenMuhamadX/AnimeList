@@ -21,7 +21,7 @@ const Search = () => {
       <div className="relative">
          <input
             placeholder="cari anime..."
-            className="w-full p-2 rounded"
+            className="w-full p-2 rounded-full borderr"
             ref={searchRef}
             onKeyDown={handleSearch}
             required
