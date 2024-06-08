@@ -7,7 +7,7 @@ const UserAction = async () => {
    const actionUrl = user ? "/api/auth/signout" : "/api/auth/signin";
 
    return (
-      <div className="flex gap-2 justify-between">
+      <div className="flex gap-4 justify-between">
          {user ? (
             <Link href="/user/dashboard" className="py-1">
                Dashboard
@@ -15,7 +15,7 @@ const UserAction = async () => {
          ) : null}
          <Link
             href={actionUrl}
-            className="rounded-full bg-color-dark hover:bg-color-primary hover:text-color-dark transition-all text-color-accent py-1 px-12 inline-block"
+            className="hover:scale-95 rounded-2xl hover:bg-opacity-95 bg-color-dark transition-all text-color-accent py-1 px-12 inline-block"
          >
             {actionLabel}
          </Link>
