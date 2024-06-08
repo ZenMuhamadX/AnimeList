@@ -1,14 +1,18 @@
 import { getAnime } from "@/lib/fetchAPI";
 import VideoPlayer from "@/components/utils/videoPlayer";
 import Image from "next/image";
+import ButtonCollections from "@/components/AnimeList/CollectionButton";
+import { authUserSession } from "@/lib/auth-lib";
 const Page = async ({ params: { id } }) => {
    const anime = await getAnime(`anime/${id}`);
+   const user = await authUserSession();
    return (
       <>
          <div className="pt-4 px-4">
             <h3 className="text-color-primary text-2xl">
                {anime.data.title} - {anime.data.year}
             </h3>
+            <ButtonCollections />
          </div>
          <div className="pt-4 px-4 gap-2 flex text-color-primary overflow-x-auto">
             <div className="p-2 w-36 flex flex-col justify-center items-center rounded-full border-color-accent border">
