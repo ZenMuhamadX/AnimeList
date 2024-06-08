@@ -27,7 +27,7 @@ const Page = async () => {
             width={250}
             height={250}
             src={user?.image}
-            className="border-2 border-color-accent rounded-full"
+            className="border-2 border-color-primary rounded-full"
          />
       </div>
    );
