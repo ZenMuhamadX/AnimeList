@@ -6,8 +6,6 @@ export async function POST(request) {
 
    const insert = await db.from("animelist_collection").insert(data);
 
-   console.log(insert);
-
    return Response.json({
       response: insert,
    });
