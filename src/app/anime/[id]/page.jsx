@@ -18,7 +18,7 @@ const Page = async ({ params: { id } }) => {
             <h3 className="text-color-primary text-2xl">
                {anime.data.title} - {anime.data.year}
             </h3>
-            <ButtonCollections anime_mal_id={id} user_email={user?.email} />
+            <ButtonCollections mal_id={id} user_email={user?.email} />
          </div>
          <div className="pt-4 px-4 gap-2 flex text-color-primary overflow-x-auto">
             <div className="p-2 w-36 flex flex-col justify-center items-center rounded-full border-color-accent border">
