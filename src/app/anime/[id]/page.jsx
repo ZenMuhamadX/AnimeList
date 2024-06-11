@@ -11,7 +11,7 @@ const Page = async ({ params: { id } }) => {
    const collection = await db
       .from("animeist_colection")
       .select("*")
-      .eq("user_email", user.email);
+      .eq("user_email", user?.email);
    return (
       <>
          <div className="pt-4 px-4">
