@@ -11,11 +11,11 @@ const ButtonCollections = ({ anime_mal_id, user_email }) => {
          body: JSON.stringify(data),
       });
       const result = await response.json();
-      if (result.response.status == 201) {
-         setIsCreted(true);
-      } else {
-         setIsCreted(false);
-      }
+      // if (result.response.status == 201) {
+      //    setIsCreted(true);
+      // } else {
+      //    setIsCreted(false);
+      // }
    };
    return (
       <>
