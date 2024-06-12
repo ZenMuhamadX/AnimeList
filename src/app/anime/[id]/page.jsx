@@ -20,7 +20,14 @@ const Page = async ({ params: { id } }) => {
                {anime.data.title} - {anime.data.year}
             </h3>
             {collection.data.length === 0 && user && (
-               <ButtonCollections mal_id={id} user_email={user?.email} />
+               <ButtonCollections
+                  key={id}
+                  mal_id={id}
+                  user_email={user?.email}
+                  anime_title={anime.data.title}
+                  anime_image={anime.data.images.webp.image_url}
+                  alt_image={anime.data.images.jpg.image_url}
+               />
             )}
          </div>
          <div className="pt-4 px-4 gap-2 flex text-color-primary overflow-x-auto">
