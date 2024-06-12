@@ -11,14 +11,15 @@ const Page = async ({ params: { id } }) => {
    const collection = await db
       .from("animelist_collection")
       .select("*")
-      .eq("user_email", user?.email);
+      .eq("user_email", user?.email)
+      .eq("mal_id", id);
    return (
       <>
          <div className="pt-4 px-4">
             <h3 className="text-color-primary text-2xl">
                {anime.data.title} - {anime.data.year}
             </h3>
-            {collection.data.length != 0 && user && (
+            {collection.data.length === 0 && user && (
                <ButtonCollections mal_id={id} user_email={user?.email} />
             )}
          </div>
