@@ -18,7 +18,7 @@ const Page = async ({ params: { id } }) => {
             <h3 className="text-color-primary text-2xl">
                {anime.data.title} - {anime.data.year}
             </h3>
-            {collection.data != null && user && (
+            {collection.data != "" && user && (
                <ButtonCollections mal_id={id} user_email={user?.email} />
             )}
          </div>
