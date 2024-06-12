@@ -4,6 +4,7 @@ import Image from "next/image";
 import ButtonCollections from "@/components/AnimeList/CollectionButton";
 import { authUserSession } from "@/lib/auth-lib";
 import { db } from "@/lib/supabase";
+import CommentInput from "@/components/AnimeList/CommentInput";
 
 const Page = async ({ params: { id } }) => {
    const anime = await getAnime(`anime/${id}`);
@@ -67,6 +68,9 @@ const Page = async ({ params: { id } }) => {
             <p className="text-color-primary text-justify text-xl">
                {anime.data.synopsis}
             </p>
+         </div>
+         <div className="px-4">
+            <CommentInput />
          </div>
          <div className="">
             <VideoPlayer videoID={anime.data.trailer.youtube_id} />
