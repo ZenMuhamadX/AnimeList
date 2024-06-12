@@ -9,10 +9,9 @@ const Page = async ({ params: { id } }) => {
    const anime = await getAnime(`anime/${id}`);
    const user = await authUserSession();
    const collection = await db
-      .from("animelist_colection")
+      .from("animelist_collection")
       .select("*")
       .eq("user_email", user?.email);
-   console.log(collection);
    return (
       <>
          <div className="pt-4 px-4">
