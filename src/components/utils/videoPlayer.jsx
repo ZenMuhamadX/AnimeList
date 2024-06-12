@@ -4,10 +4,16 @@ import { useState } from "react";
 import YouTube from "react-youtube";
 
 const VideoPlayer = ({ videoID }) => {
-   const [isOpen, setIsOpen] = useState(true);
+   const [isOpen, setIsOpen] = useState(false); // Ubah default isOpen menjadi false
+
    const handleVideoPlayer = () => {
       setIsOpen((prevState) => !prevState);
    };
+
+   const closeVideoPlayer = () => {
+      setIsOpen(false);
+   };
+
    const option = {
       width: "250",
       height: "250",
@@ -17,7 +23,7 @@ const VideoPlayer = ({ videoID }) => {
       return (
          <div className="fixed bottom-2 right-2 ">
             <button
-               onClick={handleVideoPlayer}
+               onClick={closeVideoPlayer}
                className="text-color-primary float-right bg-color-secondary px-3 mb-1"
             >
                X
@@ -32,15 +38,19 @@ const VideoPlayer = ({ videoID }) => {
       );
    };
 
-   return isOpen ? (
-      <Player />
-   ) : (
-      <button
-         className="border rounded-full fixed bottom-5 right-5 w-32 bg-color-accent hover:bg-color-primary transition-all shadow-xl text-color-dark"
-         onClick={handleVideoPlayer}
-      >
-         Tonton Trailer
-      </button>
+   return (
+      <>
+         {isOpen && <Player />}
+         {!isOpen && (
+            <button
+               className="border rounded-full fixed bottom-5 right-5 w-32 bg-color-accent hover:bg-color-primary transition-all shadow-xl text-color-dark"
+               onClick={handleVideoPlayer}
+            >
+               Tonton Trailer
+            </button>
+         )}
+      </>
    );
 };
+
 export default VideoPlayer;

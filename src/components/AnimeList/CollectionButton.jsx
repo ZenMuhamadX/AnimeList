@@ -8,7 +8,8 @@ const ButtonCollections = ({
    anime_title,
    alt_image,
 }) => {
-   const [isCreated, setIsCreted] = useState(false);
+   const [isCreated, setIsCreated] = useState(false);
+
    const handleButton = async (e) => {
       e.preventDefault();
       const data = { mal_id, user_email, anime_image, anime_title, alt_image };
@@ -17,11 +18,12 @@ const ButtonCollections = ({
          body: JSON.stringify(data),
       });
       const result = await response.json();
-      if (result.response.status == 201) {
-         setIsCreted(true);
+      if (result.status == 201) {
+         setIsCreated(true);
       } else {
-         setIsCreted(false);
+         setIsCreated(false);
       }
+      return;
    };
    return (
       <>

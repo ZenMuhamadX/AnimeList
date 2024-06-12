@@ -3,9 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { db } from "@/lib/supabase";
 import { authUserSession } from "@/lib/auth-lib";
+import { redirect } from "next/navigation";
 
 const Page = async () => {
    const user = await authUserSession();
+   if (!user) {
+      redirect("/api/auth/signin");
+   }
    const dataCollections = await db
       .from("animelist_collection")
       .select("*")

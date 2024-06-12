@@ -5,6 +5,8 @@ import ButtonCollections from "@/components/AnimeList/CollectionButton";
 import { authUserSession } from "@/lib/auth-lib";
 import { db } from "@/lib/supabase";
 import CommentInput from "@/components/AnimeList/CommentInput";
+import CommentBox from "@/components/AnimeList/CommentBox";
+import Link from "next/link";
 
 const Page = async ({ params: { id } }) => {
    const anime = await getAnime(`anime/${id}`);
@@ -70,7 +72,22 @@ const Page = async ({ params: { id } }) => {
             </p>
          </div>
          <div className="px-4">
-            <CommentInput />
+            <h3 className="text-color-primary text-2xl mb-2">Comment</h3>
+            <CommentBox mal_id={id} />
+            {user ? (
+               <CommentInput
+                  anime_title={anime.data.title}
+                  mal_id={id}
+                  user_email={user.email}
+                  username={user.name}
+               />
+            ) : (
+               <Link href={"/api/auth/signin"}>
+                  <p className="font-bold border flex justify-center items-start text-color-dark text-xl p-2 mb-3 rounded-md bg-color-accent hover:bg-color-primary transition-all">
+                     Login to comment
+                  </p>
+               </Link>
+            )}
          </div>
          <div className="">
             <VideoPlayer videoID={anime.data.trailer.youtube_id} />
