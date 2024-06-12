@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const ButtonCollections = ({
@@ -8,6 +9,7 @@ const ButtonCollections = ({
    anime_title,
    alt_image,
 }) => {
+   const router = useRouter();
    const [isCreated, setIsCreated] = useState(false);
 
    const handleButton = async (e) => {
@@ -20,6 +22,7 @@ const ButtonCollections = ({
       const result = await response.json();
       if (result.status == 201) {
          setIsCreated(true);
+         router.refresh();
       } else {
          setIsCreated(false);
       }
