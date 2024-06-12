@@ -20,7 +20,7 @@ const ButtonCollections = ({ mal_id, user_email }) => {
    return (
       <>
          {isCreated ? (
-            <p className="text-color-primary">added to collections</p>
+            <p className="text-color-primary text-xl">added to collections</p>
          ) : (
             <button
                onClick={handleButton}
@@ -32,5 +32,4 @@ const ButtonCollections = ({ mal_id, user_email }) => {
       </>
    );
 };
-
 export default ButtonCollections;

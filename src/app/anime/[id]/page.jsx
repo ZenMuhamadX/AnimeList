@@ -4,6 +4,7 @@ import Image from "next/image";
 import ButtonCollections from "@/components/AnimeList/CollectionButton";
 import { authUserSession } from "@/lib/auth-lib";
 import { db } from "@/lib/supabase";
+import Link from "next/link";
 
 const Page = async ({ params: { id } }) => {
    const anime = await getAnime(`anime/${id}`);
@@ -13,15 +14,23 @@ const Page = async ({ params: { id } }) => {
       .select("*")
       .eq("user_email", user?.email)
       .eq("mal_id", id);
+   const isCOllectionEmpty = collection.data.length === 0;
    return (
       <>
          <div className="pt-4 px-4">
             <h3 className="text-color-primary text-2xl">
                {anime.data.title} - {anime.data.year}
             </h3>
-            {collection.data.length === 0 && user && (
+            {isCOllectionEmpty && user ? (
                <ButtonCollections mal_id={id} user_email={user?.email} />
-            )}{"Login for added to collections"}
+            ) : (
+               <Link
+                  className="px-2 py-2 bg-color-accent text-color-dark hover:scale-90 font-bold transition-all hover:bg-opacity-95 rounded-full"
+                  href="/api/auth/signin"
+               >
+                  Sign in to add Collection
+               </Link>
+            )}
          </div>
          <div className="pt-4 px-4 gap-2 flex text-color-primary overflow-x-auto">
             <div className="p-2 w-36 flex flex-col justify-center items-center rounded-full border-color-accent border">
