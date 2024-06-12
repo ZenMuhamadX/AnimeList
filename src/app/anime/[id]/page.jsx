@@ -21,7 +21,7 @@ const Page = async ({ params: { id } }) => {
             </h3>
             {collection.data.length === 0 && user && (
                <ButtonCollections mal_id={id} user_email={user?.email} />
-            )}
+            )}{"Login for added to collections"}
          </div>
          <div className="pt-4 px-4 gap-2 flex text-color-primary overflow-x-auto">
             <div className="p-2 w-36 flex flex-col justify-center items-center rounded-full border-color-accent border">
