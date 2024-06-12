@@ -7,7 +7,7 @@ const CommentBox = async ({ mal_id }) => {
       .select()
       .eq("mal_id", mal_id);
    return (
-      <div className="grid grid-cols-4 gap-4 mb-4">
+      <div className="grid sm:grid-cols-4 grid-cols-2 gap-4 mb-4">
          {comments.data.map((comment) => {
             return (
                <div
