@@ -6,17 +6,19 @@ export async function POST(request) {
 
    const data = { mal_id, user_email, anime_image, anime_title, alt_image };
 
-   const insert = await db.from("animelist_collection").insert(data);
-   if (insert.data.status != 201) {
+   const { error, status, statusText } = await db
+      .from("animelist_collection")
+      .insert(data);
+   if (error) {
       return Response.json({
-         status: insert.data.status,
-         message: insert.data.error,
+         status: status,
+         message: statusText,
          isCreated: false,
       });
    } else {
       return Response.json({
-         status: insert.data.status,
-         message: insert.data.error,
+         status: status,
+         message: statusText,
          isCreated: true,
       });
    }

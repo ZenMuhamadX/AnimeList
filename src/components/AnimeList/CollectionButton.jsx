@@ -20,7 +20,7 @@ const ButtonCollections = ({
          body: JSON.stringify(data),
       });
       const result = await response.json();
-      if (result.status == 201) {
+      if (result.isCreated == true) {
          setIsCreated(true);
          router.refresh();
       } else {
