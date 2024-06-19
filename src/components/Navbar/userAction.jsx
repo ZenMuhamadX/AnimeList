@@ -15,7 +15,7 @@ const UserAction = async () => {
          ) : null}
          <Link
             href={actionUrl}
-            className="hover:scale-95 rounded-2xl hover:bg-opacity-95 bg-color-dark transition-all text-color-accent py-1 px-12 inline-block"
+            className="active:scale-95 rounded-2xl hover:bg-opacity-95 bg-color-dark transition-all text-color-accent py-1 px-12 inline-block"
          >
             {actionLabel}
          </Link>

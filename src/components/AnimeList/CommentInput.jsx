@@ -52,7 +52,7 @@ const CommentInput = ({ mal_id, user_email, username, anime_title }) => {
          {comment.length >= 3 && (
             <button
                onClick={handlePosting}
-               className="w-52 py-2 px-2 rounded-md bg-color-accent hover:scale-95 transition-all"
+               className="w-52 py-2 px-2 rounded-md bg-color-accent active:scale-95 transition-all"
             >
                Posting Komentar
             </button>

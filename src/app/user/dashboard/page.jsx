@@ -18,13 +18,13 @@ const Page = async () => {
          />
          <div className="py-8 flex gap-4 flex-wrap">
             <Link
-               className="hover:bg-opacity-75 rounded-2xl hover:scale-95 transition-all  bg-color-accent text-color-dark font-bold px-4 py-3 text-xl"
+               className="hover:bg-opacity-75 rounded-2xl active:scale-95 transition-all  bg-color-accent text-color-dark font-bold px-4 py-3 text-xl"
                href="/user/dashboard/collections"
             >
                My Collection
             </Link>
             <Link
-               className="hover:bg-opacity-75 rounded-2xl hover:scale-95 transition-all  bg-color-accent text-color-dark font-bold px-4 py-3 text-xl"
+               className="hover:bg-opacity-75 rounded-2xl active:scale-95 transition-all  bg-color-accent text-color-dark font-bold px-4 py-3 text-xl"
                href="/user/dashboard/comment"
             >
                My Comment

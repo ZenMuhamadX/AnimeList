@@ -36,7 +36,7 @@ const CommentPage = async () => {
                         <div className="flex justify-end items-center mt-2 space-x-2">
                            <Link
                               href={`/anime/${comment.mal_id}`}
-                              className="bg-color-accent text-color-ark border rounded-md border-color-primary px-4 py-2 transition transform hover:text-color-primary hover:border-color-accent  hover:bg-color-dark hover:scale-105"
+                              className="bg-color-accent text-color-ark border rounded-md border-color-primary px-4 py-2 transition transform hover:text-color-primary hover:border-color-accent  hover:bg-color-dark active:scale-105"
                            >
                               View comment
                            </Link>

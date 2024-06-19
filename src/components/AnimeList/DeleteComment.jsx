@@ -20,7 +20,7 @@ const DeleteComment = ({ id }) => {
    return (
       <button
          onClick={handleDelete}
-         className="bg-color-secondary text-color-primary border rounded-md border-color-primary px-4 py-2 transition transform hover:text-color-primary hover:border-color-accent  hover:bg-color-dark hover:scale-105"
+         className="bg-color-secondary text-color-primary border rounded-md border-color-primary px-4 py-2 transition transform hover:text-color-primary hover:border-color-accent  hover:bg-color-dark active:scale-105"
       >
          Delete Comment
       </button>
